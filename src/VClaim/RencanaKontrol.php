@@ -41,6 +41,11 @@ class RencanaKontrol extends BpjsService
         return $this->get('RencanaKontrol/noSuratKontrol/' . $noSurat);
     }
 
+    public function getByNoKartu($bulan, $tahun, $nokartu, $filter)
+    {
+        return $this->get('RencanaKontrol/ListRencanaKontrol/Bulan/' . $bulan . '/Tahun/' . $tahun . '/Nokartu/' . $nokartu . '/filter/' . $filter);
+    }
+    
     // $tglAwal, $tglAkhir yyyy-mm-dd
     // $filter: [1|2] tanggal entri|tanggal rencana kontrol
     public function getByTanggal($tglAwal, $tglAkhir, $filter)
